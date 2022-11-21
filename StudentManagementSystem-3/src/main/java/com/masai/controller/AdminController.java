@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.masai.model.Student;
-import com.masai.service.StudentServiceImpl;
+import com.masai.service.StudentService;
 
 @RestController
 @RequestMapping("/api/students")
@@ -25,7 +25,7 @@ public class AdminController {
 
 	
 	@Autowired
-	private StudentServiceImpl sService;
+	private StudentService sService;
 	
 	
 	
@@ -45,7 +45,6 @@ public class AdminController {
         return new ResponseEntity<List<Student>>(stds,HttpStatus.ACCEPTED);         
     }
 	
-
 	
 	
 	
@@ -75,4 +74,6 @@ public class AdminController {
         
         return new ResponseEntity<List<Student>>(stds,HttpStatus.ACCEPTED);         
     }
+	 
+	 
 }

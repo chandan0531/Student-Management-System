@@ -2,6 +2,7 @@ package com.masai.service;
 
 import java.util.List;
 
+import com.masai.dto.StudentDto;
 import com.masai.exception.CourseException;
 import com.masai.exception.StudentException;
 import com.masai.model.Student;
@@ -22,4 +23,6 @@ public interface StudentService {
    
     
     public List<Student> findStudentsByName(String name)throws StudentException;
+    
+//    public StudentDto getStudentByCourse(Integer id) throws CourseException;
 }
